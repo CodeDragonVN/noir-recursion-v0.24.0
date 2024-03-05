@@ -1,9 +1,9 @@
-
-# Command to test
+# Recursion tests for Noir version 0.24.0
+## Command to test
 
 `yarn && yarn test`
 
-# Expected result
+## Expected result
 ```
   ✔ smart contract can verify a recursive proof (248214ms)
   ✔ 1_mul (smart contract verifier) (6078ms)
@@ -13,7 +13,7 @@
 ```
 
 
-# package.json
+## package.json
 ```
 {
     "name": "integration-tests",
