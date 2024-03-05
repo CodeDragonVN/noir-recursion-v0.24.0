@@ -1,1 +1,53 @@
-# noir-recursion-v0.24.0
+
+# Command to test
+
+`yarn && yarn test`
+
+# Expected result
+```
+  ✔ smart contract can verify a recursive proof (248214ms)
+  ✔ 1_mul (smart contract verifier) (6078ms)
+  ✔ assert_statement (smart contract verifier) (1913ms)
+
+  3 passing (4m)
+```
+
+
+# package.json
+```
+{
+    "name": "integration-tests",
+    "license": "(MIT OR Apache-2.0)",
+    "main": "index.js",
+    "private": true,
+    "scripts": {
+        "test": "bash ./scripts/codegen-verifiers.sh && hardhat test test/node/*",
+        "lint": "NODE_NO_WARNINGS=1 eslint . --ext .ts --ignore-path ./.eslintignore  --max-warnings 0"
+    },
+    "dependencies": {
+        "@noir-lang/backend_barretenberg": "^0.24.0",
+        "@noir-lang/noir_js": "^0.24.0",
+        "@noir-lang/noir_wasm": "^0.24.0",
+
+        "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+        "@nomicfoundation/hardhat-ethers": "^3.0.0",
+        "@web/dev-server-esbuild": "^0.3.6",
+        "@web/test-runner": "^0.15.3",
+        "@web/test-runner-playwright": "^0.10.0",
+        "chai": "^4.2.0",
+        "eslint": "^8.56.0",
+        "eslint-plugin-prettier": "^5.0.0",
+        "ethers": "^6.7.1",
+        "hardhat": "^2.17.4",
+        "prettier": "3.0.3",
+        "smol-toml": "^1.1.2",
+        "toml": "^3.0.0",
+        "ts-node": "^10.9.2",
+        "tslog": "^4.9.2",
+        "typescript": "^5.3.3"
+    },
+    "devDependencies": {
+        "@types/chai": "^4"
+    }
+}
+```
